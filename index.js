@@ -36,10 +36,10 @@ client.onItemSold('*', (event) => {
 const tweet = async (event ) => {
     var price_eth = event.payload.sale_price/1000000000000000000; 
     var price_usd = price_eth*event.payload.payment_token.usd_price; 
-    var hastag = `#${event.payload.collection.slug} #boredape #blockchain #crypto`;
+    var hastag = `#${event.payload.collection.slug} #boredape #blockchain #crypto #whalealert`;
     try{
         await rwClient.v2.tweet(
-          {"text":`🐳#NFT #Whale Alert \n\n Collection: ${event.payload.collection.slug} \n Sold for: ${price_eth} Eth (${price_usd} USD) \n Seller: ${event.payload.maker.address} \n Buyer: ${event.payload.taker.address} \n\n ${hastag} \n ${event.payload.item.permalink}`})
+          {"text":`🐳🐳 \n Collection: ${event.payload.collection.slug} \n Sold for: ${price_eth} Eth (${price_usd} USD) \n Seller: ${event.payload.maker.address} \n Buyer: ${event.payload.taker.address} \n\n ${hastag} \n ${event.payload.item.permalink}`})
     } catch(e) {
         console.error(e)
     }
