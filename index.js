@@ -39,7 +39,7 @@ const tweet = async (event ) => {
     var hastag = `#${event.payload.collection.slug} #boredape #blockchain #crypto #whalealert`;
     try{
         await rwClient.v2.tweet(
-          {"text":`🐳🐳 \n Collection: ${event.payload.collection.slug} \n Sold for: ${price_eth} Eth (${price_usd} USD) \n Seller: ${event.payload.maker.address} \n Buyer: ${event.payload.taker.address} \n\n ${hastag} \n ${event.payload.item.permalink}`})
+          {"text":`Collection: ${event.payload.collection.slug} \n Sold for: ${price_eth} Eth (${price_usd} USD) \n Seller:${event.payload.maker.address} \n Buyer:${event.payload.taker.address} \n\n ${hastag} \n ${event.payload.item.permalink}`})
     } catch(e) {
         console.error(e)
     }
