@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@opensea/stream-js": "^0.0.21-rc.1",
+    "dotenv": "^16.0.3",
+    "twitter-api-v2": "^1.12.9",
+    "ws": "^8.10.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/phoenix": "^1.5.4"
+  }
+}
